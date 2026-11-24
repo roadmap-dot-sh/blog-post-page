@@ -3,17 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn why semantic HTML matters for accessibility, SEO, and code maintainability. Includes examples, code samples, and real-world benefits.">
+    <meta name="description" content="Learn why semantic HTML matters for accessibility, SEO, and code maintainability. Includes benefits, examples, and a code sample.">
     <title>Why Semantic HTML Matters</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            max-width: 720px;
+            margin: 2rem auto;
+            padding: 0 1.25rem;
+            background-color: #ffffff;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 0 0.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            margin: 0 0 1.5rem;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem;
+            display: flex;
+            gap: 1.25rem;
+        }
+
+        header nav a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-size: 0.95rem;
+        }
+
+        article h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.5rem;
+        }
+
+        article p {
+            margin: 0 0 1rem;
+        }
+
+        article ul {
+            margin: 0 0 1rem;
+            padding-left: 1.4rem;
+        }
+
+        article li {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Inline code styling */
+        code {
+            font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+            font-size: 0.9em;
+            background-color: #f3f3f3;
+            padding: 0.1em 0.35em;
+            border-radius: 3px;
+        }
+
+        /* Code block styling */
+        pre {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 0 0 1rem;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        blockquote {
+            margin: 1.25rem 0;
+            padding: 0.25rem 0 0.25rem 1rem;
+            border-left: 3px solid #1a1a1a;
+            font-style: normal;
+        }
+
+        blockquote p {
+            margin: 0 0 0.25rem;
+            font-style: italic;
+        }
+
+        blockquote cite {
+            display: block;
+            font-style: normal;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        figure {
+            margin: 1.25rem 0;
+            text-align: center;
+        }
+
+        figure svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto 0.5rem;
+        }
+
+        figcaption {
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
+        }
+
+        a {
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        footer {
+            margin-top: 2.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+            font-size: 0.85rem;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- HEADER: site name and primary navigation -->
+    <!-- HEADER: site name, post title (h1), meta, and primary navigation -->
     <header>
         <h1>Why Semantic HTML Matters</h1>
         <p><time datetime="2026-05-20">May 20, 2026</time> by Alex Carter</p>
 
-        <!-- Primary navigation (simple, descriptive links) -->
         <nav aria-label="Primary">
             <ul>
                 <li><a href="/">Home</a></li>
@@ -23,18 +157,58 @@
         </nav>
     </header>
 
-    <!-- MAIN: contains a single article (the post) -->
+    <!-- MAIN: contains a single article for the post -->
     <main>
         <article>
 
-            <!-- Introductory paragraph (no heading needed here, h1 is in header but we'll keep h1 in header as the post title; but we need exactly one h1. The h1 is already the post title in header. However the article itself should contain the title? The requirement: one h1 for the post title. We placed h1 in header. But typically the article would contain its own h1. Let's re-structure: Move the h1 into the article, and keep header for site name + navigation. But the requirement says header for site name and primary navigation. And main containing article for the post. And one h1 for post title. So we need to move h1 into the article, and site name in header as a p or something? Let's adjust. -->
+            <p>Semantic HTML is about using the right tags for the meaning of your content. It improves accessibility, SEO, and makes your code easier to maintain.</p>
 
-            <!-- Revision: Move the h1 into the article, keep header for site name and nav -->
-            <!-- But we must keep the checklist: one h1 for post title. And header should have site name (not h1). So we'll change header to have a site name (like a p or a div) and nav. Then inside article we put h1 with post title. -->
-            
-            <!-- I'll rewrite the entire body to meet all requirements precisely. -->
+            <h2>Benefits</h2>
+            <p>Using semantic HTML helps you:</p>
+            <ul>
+                <li>Build more accessible websites</li>
+                <li>Improve search engine understanding</li>
+                <li>Write cleaner, more maintainable code</li>
+            </ul>
+
+            <h2>Examples</h2>
+            <p>When you focus on <em>meaning</em>, not appearance, you write clearer content. Use <strong>meaningful</strong> tags to structure and mark important ideas clearly.</p>
+
+            <!-- Figure with SVG image (mountain illustration) and figcaption -->
+            <figure>
+                <svg width="280" height="100" viewBox="0 0 280 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A simple line drawing of mountains with a sun in the sky.">
+                    <rect width="280" height="100" fill="#ffffff" stroke="#000" stroke-width="1.5" rx="4" ry="4"/>
+                    <!-- Sun -->
+                    <circle cx="200" cy="25" r="12" fill="none" stroke="#000" stroke-width="1.5"/>
+                    <!-- Mountains (line drawing) -->
+                    <polyline points="10,80 50,30 90,60 130,20 170,50 210,10 250,70 270,80" fill="none" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/>
+                </svg>
+                <figcaption>Mountains at sunrise.</figcaption>
+            </figure>
+
+            <!-- Blockquote with cite -->
+            <blockquote>
+                <p>“The best way to learn HTML is by writing it.”</p>
+                <cite>— MDN Web Docs</cite>
+            </blockquote>
+
+            <h2>Code sample</h2>
+            <p>Use the <code>&lt;code&gt;</code> element for inline code, like <code>&lt;code&gt;main&lt;/code&gt;</code>. Here is a code block:</p>
+
+            <pre><code>&lt;p class="note"&gt;
+    Semantic HTML makes the web better for everyone.
+&lt;/p&gt;</code></pre>
+
+            <h2>Learn more</h2>
+            <p>Read the <a href="https://html.spec.whatwg.org/multipage/">HTML Living Standard</a> to learn more about HTML.</p>
+
         </article>
     </main>
+
+    <!-- FOOTER: closing content like copyright -->
+    <footer>
+        <p>© 2026 MuBlog. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
