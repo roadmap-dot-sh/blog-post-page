@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn why semantic HTML matters for accessibility, SEO, and code maintainability. Includes examples, code samples, and real-world benefits.">
+    <title>Why Semantic HTML Matters</title>
+</head>
+<body>
+
+    <!-- HEADER: site name and primary navigation -->
+    <header>
+        <h1>Why Semantic HTML Matters</h1>
+        <p><time datetime="2026-05-20">May 20, 2026</time> by Alex Carter</p>
+
+        <!-- Primary navigation (simple, descriptive links) -->
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog/">All blog posts</a></li>
+                <li><a href="/about/">About Alex Carter</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN: contains a single article (the post) -->
+    <main>
+        <article>
+
+            <!-- Introductory paragraph (no heading needed here, h1 is in header but we'll keep h1 in header as the post title; but we need exactly one h1. The h1 is already the post title in header. However the article itself should contain the title? The requirement: one h1 for the post title. We placed h1 in header. But typically the article would contain its own h1. Let's re-structure: Move the h1 into the article, and keep header for site name + navigation. But the requirement says header for site name and primary navigation. And main containing article for the post. And one h1 for post title. So we need to move h1 into the article, and site name in header as a p or something? Let's adjust. -->
+
+            <!-- Revision: Move the h1 into the article, keep header for site name and nav -->
+            <!-- But we must keep the checklist: one h1 for post title. And header should have site name (not h1). So we'll change header to have a site name (like a p or a div) and nav. Then inside article we put h1 with post title. -->
+            
+            <!-- I'll rewrite the entire body to meet all requirements precisely. -->
+        </article>
+    </main>
+
+</body>
+</html>
